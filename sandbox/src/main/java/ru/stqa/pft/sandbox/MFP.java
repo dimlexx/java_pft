@@ -6,31 +6,36 @@ public class MFP {
     hello("123");
     hello("qwe");
 
-    double len = 5;
-    System.out.println("Площадь " + len + " = " + area(len));
+    Square s = new Square();
+
+    s.l = 5;
+    System.out.println("Площадь " + s.l + " = " + area(s));
 
     int l = 15;
-    int s = l * l;
-    System.out.println("Площадь квадрата " + l + " = " + s);
+    int ss = l * l;
+    System.out.println("Площадь квадрата " + l + " = " + ss);
+
     double q = 2;
     double w = q * q;
     System.out.println("Площадь квадрата " + q + " = " + w);
 
-double a=4;
-double b = 6;
-System.out.println("Площадь прямоугольника " + a + " и " + b + " = " + area(a, b));
+    Rectangle r = new Rectangle();
+    r.a = 4;
+    r.b = 6;
+    System.out.println("Площадь прямоугольника " + r.a + " и " + r.b + " = " + area(r));
+
   }
 
-    public static void hello(String somebody) {
+  public static void hello(String somebody) {
     System.out.println("Hello, " + somebody + " !");
   }
 
-  public static double area (double qq){
-    return qq * qq;
+  public static double area(Square s) {
+    return s.l * s.l;
   }
 
-  public static double area (double a, double b) {
-  return a * b;
+  public static double area(Rectangle r) {
+    return r.a * r.b;
   }
 
 }
